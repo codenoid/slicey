@@ -11,10 +11,12 @@ go get -u github.com/codenoid/slicey
 ## Usage
 
 ```go
-c := make(chan bool)
 
+
+bigSlice := []interface{}{"a", "b", "c", ".... so on"}
 splitted := slicey.Splitl(bigSlice, 13)
 
+c := make(chan bool)
 for _, child := range splitted {
 	// len(splitted) goroutine
 	go DoTheJob(child, c)
