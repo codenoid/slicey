@@ -13,16 +13,16 @@ func Splitl(s []interface{}, n int) [][]interface{} {
 
 	// initialize fixed number of slice
 	storage := make([][]interface{}, n)
-	
+
 	// iterate s value and share value to become
 	for _, item := range s {
-    	for index, _ := range storage {
-    		if len(storage[index]) < childlen {
-    			storage[index] = append(storage[index], item)
-    			// always break to fill up child storage from left
-    			break
-    		}
-    	}
+		for index, _ := range storage {
+			if len(storage[index]) < childlen {
+				storage[index] = append(storage[index], item)
+				// always break to fill up child storage from left
+				break
+			}
+		}
 	}
 
 	// return multidimentional slice of splitted s data
@@ -45,10 +45,10 @@ func Splitf(s []interface{}, n int) [][]interface{} {
 			// len of given s
 			break
 		}
-    	for child, _ := range storage {
-    		storage[child] = append(storage[child], s[index])
-    		index += 1
-    	}
+		for child, _ := range storage {
+			storage[child] = append(storage[child], s[index])
+			index += 1
+		}
 	}
 
 	// return multidimentional slice of splitted s data
