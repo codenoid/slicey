@@ -32,3 +32,4 @@ for i := range chans {
 - [x] Split fill all
 - [ ] Value sorting
 - [ ] Auto split dynamically
+- [ ] [Create Issue](https://github.com/codenoid/slicey/issues)
